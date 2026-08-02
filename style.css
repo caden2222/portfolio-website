@@ -1434,3 +1434,18 @@ button:focus-visible {
     }
 }
 
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-image {
+    width: 380px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid #ffffff;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
