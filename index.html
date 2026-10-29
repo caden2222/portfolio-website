@@ -1,76 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-SG">
+
 <head>
     <meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="description"
-        content="Portfolio of Caden Toh, an Applied AI and Analytics student specialising in machine learning, data engineering and intelligent systems."
-    >
+    <meta name="description"
+        content="Explore Caden Toh’s portfolio of machine learning, artificial intelligence, data analytics and software development projects.">
 
-    <title>Caden Toh | Machine Learning Portfolio</title>
+    <meta name="author" content="Caden Toh">
+    <meta name="theme-color" content="#090b0e">
+    <meta name="color-scheme" content="dark">
 
+    <!-- Social sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_SG">
+
+    <meta property="og:title" content="Caden Toh | Machine Learning & AI Portfolio">
+
+    <meta property="og:description"
+        content="Applied AI & Analytics student building practical systems with machine learning, data and software.">
+
+    <meta name="twitter:card" content="summary">
+
+    <meta name="twitter:title" content="Caden Toh | Machine Learning & AI Portfolio">
+
+    <meta name="twitter:description"
+        content="Selected projects in computer vision, conversational AI, data analytics and software development.">
+
+    <title>Caden Toh | Machine Learning & AI Portfolio</title>
+
+    <!-- Connection hints for the fonts used by your stylesheet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Prioritise the hero portrait -->
+    <link rel="preload" as="image" href="assets/images/profile.jpeg" fetchpriority="high">
+
+    <!-- Existing external files -->
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
 
-    <!-- =========================
-         Navigation
-    ========================== -->
+    <!-- ========================================
+         NAVIGATION
+    ========================================= -->
+
     <header class="site-header">
         <nav class="navbar container" aria-label="Main navigation">
-
-            <a href="#home" class="logo">
+            <a href="#home" class="logo" aria-label="Caden Toh — home">
                 Caden<span>.</span>
             </a>
 
-            <button
-                class="menu-toggle"
-                type="button"
-                aria-label="Open navigation menu"
-                aria-expanded="false"
-                aria-controls="navigation-menu"
-            >
-                ☰
+            <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false"
+                aria-controls="navigation-menu">
+                <span aria-hidden="true">☰</span>
             </button>
 
             <ul class="nav-links" id="navigation-menu">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#achievements">Achievements</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="assets/resume.pdf" target="_blank">Resume</a>
-</li>
-            </ul>
+                <li>
+                    <a href="#about">About</a>
+                </li>
 
+                <li>
+                    <a href="#skills">Skills</a>
+                </li>
+
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
+
+                <li>
+                    <a href="#achievements">Achievements</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+
+                <li>
+                    <a href="assets/resume.pdf" target="_blank" rel="noopener noreferrer"
+                        aria-label="View Caden Toh’s resume — PDF, opens in a new tab">
+                        Resume <span aria-hidden="true">↗</span>
+                    </a>
+                </li>
+            </ul>
         </nav>
     </header>
 
 
-    <main>
+    <main id="main-content">
 
-        <!-- =========================
-             Hero
-        ========================== -->
-        <section class="hero section" id="home">
+        <!-- ========================================
+             HERO
+        ========================================= -->
 
+        <section class="hero section" id="home" aria-labelledby="hero-title">
             <div class="container hero-grid">
 
                 <div class="hero-content">
-
                     <p class="eyebrow">
-                        Diploma in Applied AI & Analytics
+                        Applied AI &amp; Analytics · Singapore Polytechnic
                     </p>
 
-                    <h1>
-                        Hi, I’m <span>Caden Toh</span>.
+                    <h1 id="hero-title">
+                        Caden <span>Toh.</span>
                     </h1>
 
                     <h2>
@@ -78,545 +115,660 @@
                     </h2>
 
                     <p class="hero-description">
-                        I build machine learning, data engineering and
-                        intelligent software solutions using Python,
-                        TensorFlow, SQL and modern development tools.
+                        I connect data, code and machine learning to build
+                        practical intelligent systems — from handwritten
+                        letter recognition to conversational AI and
+                        interactive analytics.
                     </p>
 
-                    <div class="hero-actions">
-
+                    <div class="hero-actions" aria-label="Explore my work">
                         <a href="#projects" class="button button-primary">
-                            View Projects
+                            Explore My Projects
+                            <span aria-hidden="true">↘</span>
                         </a>
 
-                        <a
-                            href="assets/resume.pdf"
-                            class="button button-secondary"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
+                        <a href="assets/resume.pdf" class="button button-secondary" target="_blank"
+                            rel="noopener noreferrer" aria-label="View my resume — PDF, opens in a new tab">
                             View Resume
+                            <span aria-hidden="true">↗</span>
                         </a>
-
                     </div>
 
-                    <div class="hero-links">
-
-                        <a
-                            href="https://github.com/caden2222"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
+                    <div class="hero-links" aria-label="Find me online">
+                        <a href="https://github.com/caden2222" target="_blank" rel="noopener noreferrer"
+                            aria-label="Caden Toh on GitHub — opens in a new tab">
                             GitHub
                         </a>
 
-                        <a
-                            href="https://www.linkedin.com/in/caden-toh-wei-jie"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
+                        <a href="https://www.linkedin.com/in/caden-toh-wei-jie" target="_blank"
+                            rel="noopener noreferrer" aria-label="Caden Toh on LinkedIn — opens in a new tab">
                             LinkedIn
                         </a>
 
+                        <a href="mailto:cadentoh22@gmail.com">
+                            Email
+                        </a>
                     </div>
-
                 </div>
 
-
                 <div class="hero-image">
-
-                <img
-                    src="assets/images/profile.jpeg"
-                    alt="Caden Toh"
-                    class="profile-image"
-                    >
-
+                    <img src="assets/images/profile.jpeg" alt="Portrait of Caden Toh" class="profile-image" width="640"
+                        height="800" fetchpriority="high" decoding="async">
                 </div>
 
             </div>
-
         </section>
 
 
-        <!-- =========================
-             About
-        ========================== -->
-        <section class="section section-alt" id="about">
+        <!-- ========================================
+             ABOUT
+        ========================================= -->
 
+        <section class="section section-alt" id="about" aria-labelledby="about-title">
             <div class="container">
 
                 <div class="section-heading">
-                    <p class="section-label">About</p>
-                    <h2>About Me</h2>
+                    <p class="section-label">01 / About</p>
+
+                    <h2 id="about-title">
+                        Curious about data.<br>
+                        Driven to build.
+                    </h2>
                 </div>
 
                 <div class="about-grid">
 
                     <div class="about-text">
-
                         <p>
-                            I am a Year 2 Diploma in Applied AI & Analytics
-                            student at Singapore Polytechnic with a strong
-                            interest in machine learning, artificial intelligence
-                            and data engineering.
+                            I’m a Year 2
+                            <strong>
+                                Diploma in Applied AI &amp; Analytics
+                            </strong>
+                            student at Singapore Polytechnic, with a strong
+                            interest in machine learning, artificial
+                            intelligence and data engineering.
                         </p>
 
                         <p>
-                            I enjoy building practical systems that combine
-                            data, software development and intelligent models.
-                            I am especially interested in smart manufacturing,
-                            computer vision and scalable machine learning systems.
+                            I enjoy working where these disciplines meet:
+                            preparing data, developing intelligent models
+                            and connecting them with software people
+                            can use.
                         </p>
 
+                        <p>
+                            My projects span computer vision, conversational
+                            AI, interactive dashboards and web development.
+                            I’m especially interested in
+                            <strong>
+                                smart manufacturing, computer vision and
+                                scalable machine learning systems.
+                            </strong>
+                        </p>
+
+                        <p>
+                            Outside my technical work, I serve as
+                            <strong>SP Lifesavers Vice Captain</strong>,
+                            supporting team training, coordination and
+                            junior development.
+                        </p>
                     </div>
-
 
                     <div class="about-highlights">
 
-                        <article class="highlight-card">
-                            <h3>Current Focus</h3>
+                        <article class="highlight-card" aria-labelledby="education-title">
+                            <p class="section-label">Education</p>
+
+                            <h3 id="education-title">
+                                Singapore Polytechnic
+                            </h3>
+
                             <p>
-                                Machine learning, data engineering,
-                                MLOps and intelligent systems.
+                                Year 2 · Diploma in Applied
+                                AI &amp; Analytics.
                             </p>
                         </article>
 
-                        <article class="highlight-card">
-                            <h3>Career Goal</h3>
+                        <article class="highlight-card" aria-labelledby="focus-title">
+                            <p class="section-label">Current Focus</p>
+
+                            <h3 id="focus-title">
+                                Data. Models. Systems.
+                            </h3>
+
                             <p>
-                                To become a machine learning engineer
-                                working on scalable, real-world AI solutions.
+                                Developing my capabilities in machine
+                                learning, data engineering, MLOps and
+                                intelligent systems.
+                            </p>
+                        </article>
+
+                        <article class="highlight-card" aria-labelledby="direction-title">
+                            <p class="section-label">Career Direction</p>
+
+                            <h3 id="direction-title">
+                                Practical AI at Scale
+                            </h3>
+
+                            <p>
+                                Working towards a machine learning
+                                engineering career building scalable
+                                solutions for real-world problems.
                             </p>
                         </article>
 
                     </div>
-
                 </div>
 
             </div>
-
         </section>
 
 
-        <!-- =========================
-             Skills
-        ========================== -->
-        <section class="section" id="skills">
+        <!-- ========================================
+             TECHNICAL SKILLS
+        ========================================= -->
 
+        <section class="section" id="skills" aria-labelledby="skills-title">
             <div class="container">
 
                 <div class="section-heading">
-                    <p class="section-label">Capabilities</p>
-                    <h2>Technical Skills</h2>
+                    <p class="section-label">02 / Capabilities</p>
+
+                    <h2 id="skills-title">
+                        The tools behind the work.
+                    </h2>
+
+                    <p class="hero-description">
+                        A foundation across programming, machine learning,
+                        data analytics and software development.
+                    </p>
                 </div>
 
                 <div class="skills-grid">
 
-                    <article class="skill-card">
-                        <h3>Programming</h3>
+                    <article class="skill-card" aria-labelledby="programming-title">
+                        <p class="section-label">01 / Languages</p>
 
-                        <div class="skill-tags">
-                            <span>Python</span>
-                            <span>SQL</span>
-                            <span>JavaScript</span>
-                            <span>HTML</span>
-                            <span>CSS</span>
+                        <h3 id="programming-title">
+                            Programming
+                        </h3>
+
+                        <div class="skill-tags" role="list" aria-label="Programming languages">
+                            <span role="listitem">Python</span>
+                            <span role="listitem">SQL</span>
+                            <span role="listitem">JavaScript</span>
+                            <span role="listitem">HTML</span>
+                            <span role="listitem">CSS</span>
                         </div>
                     </article>
 
+                    <article class="skill-card" aria-labelledby="machine-learning-title">
+                        <p class="section-label">02 / Intelligence</p>
 
-                    <article class="skill-card">
-                        <h3>Machine Learning</h3>
+                        <h3 id="machine-learning-title">
+                            Machine Learning
+                        </h3>
 
-                        <div class="skill-tags">
-                            <span>TensorFlow</span>
-                            <span>Keras</span>
-                            <span>Scikit-learn</span>
-                            <span>CNN</span>
-                            <span>RNN</span>
-                            <span>NLP</span>
+                        <div class="skill-tags" role="list" aria-label="Machine learning tools and techniques">
+                            <span role="listitem">TensorFlow</span>
+                            <span role="listitem">Keras</span>
+                            <span role="listitem">Scikit-learn</span>
+                            <span role="listitem">CNN</span>
+                            <span role="listitem">RNN</span>
+                            <span role="listitem">NLP</span>
                         </div>
                     </article>
 
+                    <article class="skill-card" aria-labelledby="analytics-title">
+                        <p class="section-label">03 / Data</p>
 
-                    <article class="skill-card">
-                        <h3>Data & Analytics</h3>
+                        <h3 id="analytics-title">
+                            Data &amp; Analytics
+                        </h3>
 
-                        <div class="skill-tags">
-                            <span>Pandas</span>
-                            <span>NumPy</span>
-                            <span>Power BI</span>
-                            <span>ETL</span>
-                            <span>Data Warehousing</span>
+                        <div class="skill-tags" role="list" aria-label="Data and analytics tools">
+                            <span role="listitem">Pandas</span>
+                            <span role="listitem">NumPy</span>
+                            <span role="listitem">Power BI</span>
+                            <span role="listitem">ETL</span>
+                            <span role="listitem">Data Warehousing</span>
                         </div>
                     </article>
 
+                    <article class="skill-card" aria-labelledby="development-title">
+                        <p class="section-label">04 / Engineering</p>
 
-                    <article class="skill-card">
-                        <h3>Software Development</h3>
+                        <h3 id="development-title">
+                            Software Development
+                        </h3>
 
-                        <div class="skill-tags">
-                            <span>Node.js</span>
-                            <span>Express.js</span>
-                            <span>REST APIs</span>
-                            <span>MySQL</span>
-                            <span>Git</span>
-                            <span>GitHub</span>
+                        <div class="skill-tags" role="list" aria-label="Software development tools">
+                            <span role="listitem">Node.js</span>
+                            <span role="listitem">Express.js</span>
+                            <span role="listitem">REST APIs</span>
+                            <span role="listitem">MySQL</span>
+                            <span role="listitem">Git</span>
+                            <span role="listitem">GitHub</span>
                         </div>
                     </article>
 
                 </div>
-
             </div>
-
         </section>
 
 
-        <!-- =========================
-             Projects
-        ========================== -->
-        <section class="section section-alt" id="projects">
+        <!-- ========================================
+             FEATURED PROJECTS
+        ========================================= -->
 
+        <section class="section section-alt" id="projects" aria-labelledby="projects-title">
             <div class="container">
 
                 <div class="section-heading">
-                    <p class="section-label">Selected Work</p>
-                    <h2>Featured Projects</h2>
-                </div>
+                    <p class="section-label">03 / Selected Work</p>
 
+                    <h2 id="projects-title">
+                        Ideas turned into projects.
+                    </h2>
+
+                    <p class="hero-description">
+                        Four projects exploring how machine learning,
+                        data and software can solve practical problems.
+                    </p>
+                </div>
 
                 <div class="projects-grid">
 
-                    <!-- Project 1 -->
-                    <article class="project-card">
+                    <!-- PROJECT 01: EMNIST CNN -->
 
+                    <article class="project-card" aria-labelledby="cnn-title" aria-describedby="cnn-description">
                         <div class="project-image">
-                            <img
-                                src="assets/images/emnist-project.png"
-                                alt="EMNIST letter classification project preview"
-                            >
+                            <img src="assets/images/emnist-project.png"
+                                alt="Preview of the EMNIST handwritten letter classification project" width="1280"
+                                height="800" loading="lazy" decoding="async">
                         </div>
 
                         <div class="project-content">
-
                             <p class="project-category">
-                                Machine Learning
+                                01 / Machine Learning
                             </p>
 
-                            <h3>
+                            <h3 id="cnn-title">
                                 CNN Image Classification
                             </h3>
 
-                            <p>
-                                Developed a convolutional neural network
-                                to classify handwritten letters from the
-                                EMNIST dataset.
+                            <p id="cnn-description">
+                                A convolutional neural network that
+                                classifies handwritten letters from the
+                                EMNIST dataset, with an emphasis on
+                                preprocessing, model optimisation and
+                                performance evaluation.
                             </p>
 
-                            <div class="project-tags">
-                                <span>Python</span>
-                                <span>TensorFlow</span>
-                                <span>Keras</span>
+                            <div class="project-tags" role="list" aria-label="CNN project technologies">
+                                <span role="listitem">Python</span>
+                                <span role="listitem">TensorFlow</span>
+                                <span role="listitem">Keras</span>
+                                <span role="listitem">Computer Vision</span>
                             </div>
 
-                            <ul>
-                                <li>Improved model accuracy to 94.28%.</li>
-                                <li>Applied preprocessing and model optimisation.</li>
-                                <li>Evaluated performance using accuracy and confidence thresholds.</li>
+                            <ul aria-label="CNN project highlights">
+                                <li>
+                                    Improved model accuracy to
+                                    <strong>94.28%.</strong>
+                                </li>
+
+                                <li>
+                                    Applied preprocessing and model
+                                    optimisation to improve classification.
+                                </li>
+
+                                <li>
+                                    Evaluated performance using accuracy
+                                    and confidence thresholds.
+                                </li>
                             </ul>
 
                             <div class="project-actions">
-                                <a href="projects/cnn.html" class="text-link">
-                                    View Project
+                                <a href="projects/cnn.html" class="text-link"
+                                    aria-label="Explore the CNN image classification project">
+                                    Explore Project
                                 </a>
-
-                                
                             </div>
-
                         </div>
-
                     </article>
 
 
-                   
+                    <!-- PROJECT 02: AI CHATBOT -->
 
-
-                    <!-- Project 2 -->
-                    <article class="project-card">
-
+                    <article class="project-card" aria-labelledby="chatbot-title"
+                        aria-describedby="chatbot-description">
                         <div class="project-image">
-                            <img
-                                src="assets/images/chatbot-project.jpg"
-                                alt="AI burnout support chatbot preview"
-                            >
+                            <img src="assets/images/chatbot-project.jpg" alt="Preview of the AI burnout support chatbot"
+                                width="1280" height="800" loading="lazy" decoding="async">
                         </div>
 
                         <div class="project-content">
-
                             <p class="project-category">
-                                Generative AI
+                                02 / Generative AI
                             </p>
 
-                            <h3>
+                            <h3 id="chatbot-title">
                                 AI Burnout Support Chatbot
                             </h3>
 
-                            <p>
-                                Developed an AI-powered chatbot that
-                                provides contextual burnout support
-                                through natural language conversations.
+                            <p id="chatbot-description">
+                                An AI-powered conversational application
+                                designed to provide contextual burnout
+                                support through accessible, natural
+                                language interactions.
                             </p>
 
-                            <div class="project-tags">
-                                <span>OpenAI API</span>
-                                <span>NLP</span>
-                                <span>Prompt Engineering</span>
+                            <div class="project-tags" role="list" aria-label="Chatbot project technologies">
+                                <span role="listitem">OpenAI API</span>
+                                <span role="listitem">NLP</span>
+                                <span role="listitem">Prompt Engineering</span>
                             </div>
 
-                            <ul>
-                                <li>Integrated the OpenAI API.</li>
-                                <li>Designed prompts for contextual responses.</li>
-                                <li>Focused on accessible and supportive user interactions.</li>
+                            <ul aria-label="Chatbot project highlights">
+                                <li>
+                                    Integrated the OpenAI API to support
+                                    natural language conversations.
+                                </li>
+
+                                <li>
+                                    Designed prompts for contextual
+                                    responses.
+                                </li>
+
+                                <li>
+                                    Focused on accessible and supportive
+                                    user interactions.
+                                </li>
                             </ul>
 
                             <div class="project-actions">
-                                <a href="projects/chatbot.html" class="text-link">
-                                    View Project
+                                <a href="projects/chatbot.html" class="text-link"
+                                    aria-label="Explore the AI burnout support chatbot project">
+                                    Explore Project
                                 </a>
-
-                                
                             </div>
-
                         </div>
-
                     </article>
 
 
-                    
+                    <!-- PROJECT 03: POWER BI -->
 
-
-                    <!-- Project 4 -->
-                    <article class="project-card">
-
+                    <article class="project-card" aria-labelledby="powerbi-title"
+                        aria-describedby="powerbi-description">
                         <div class="project-image">
-                            <img
-                                src="assets/images/powerbi-project.png"
-                                alt="Power BI resident data dashboard preview"
-                            >
+                            <img src="assets/images/powerbi-project.png"
+                                alt="Preview of the Power BI dashboard analysing gaming engagement and MRT accessibility"
+                                width="1280" height="800" loading="lazy" decoding="async">
                         </div>
 
                         <div class="project-content">
-
                             <p class="project-category">
-                                Data Analytics
+                                03 / Data Analytics
                             </p>
 
-                            <h3>
+                            <h3 id="powerbi-title">
                                 Power BI Resident Data Dashboard
                             </h3>
 
-                            <p>
-                                Created an interactive dashboard to analyse
-                                gaming engagement, motivations and MRT
+                            <p id="powerbi-description">
+                                An interactive dashboard exploring gaming
+                                engagement, player motivations and MRT
                                 accessibility across residential areas.
                             </p>
 
-                            <div class="project-tags">
-                                <span>Power BI</span>
-                                <span>DAX</span>
-                                <span>Data Visualisation</span>
+                            <div class="project-tags" role="list" aria-label="Dashboard project technologies">
+                                <span role="listitem">Power BI</span>
+                                <span role="listitem">DAX</span>
+                                <span role="listitem">Data Visualisation</span>
                             </div>
 
-                            <ul>
-                                <li>Created ranking and KPI measures.</li>
-                                <li>Designed charts for clear storytelling.</li>
-                                <li>Identified key engagement and accessibility insights.</li>
+                            <ul aria-label="Dashboard project highlights">
+                                <li>
+                                    Created ranking and KPI measures
+                                    to support comparisons.
+                                </li>
+
+                                <li>
+                                    Designed charts that communicate
+                                    patterns clearly.
+                                </li>
+
+                                <li>
+                                    Identified insights into engagement
+                                    and accessibility.
+                                </li>
                             </ul>
 
                             <div class="project-actions">
-                                <a href="projects/powerbi.html" class="text-link">
-                                    View Project
+                                <a href="projects/powerbi.html" class="text-link"
+                                    aria-label="Explore the Power BI resident data dashboard project">
+                                    Explore Project
                                 </a>
                             </div>
-
                         </div>
-
                     </article>
 
 
-                    <!-- Project 6 -->
-                    <article class="project-card">
+                    <!-- PROJECT 04: PRUDENTIAL HACKATHON -->
 
+                    <article class="project-card" aria-labelledby="prudential-title"
+                        aria-describedby="prudential-description">
                         <div class="project-image">
-                            <img
-                                src="assets/images/prudential-project.png"
-                                alt="Gamified insurance platform project preview"
-                            >
+                            <img src="assets/images/prudential-project.png"
+                                alt="Preview of the gamified insurance platform prototype" width="1280" height="800"
+                                loading="lazy" decoding="async">
                         </div>
 
                         <div class="project-content">
-
                             <p class="project-category">
-                                FinTech Hackathon
+                                04 / FinTech Hackathon
                             </p>
 
-                            <h3>
+                            <h3 id="prudential-title">
                                 Gamified Insurance Platform
                             </h3>
 
-                            <p>
-                                Collaborated on a simple gamified insurance
-                                platform designed to improve insurance
-                                engagement among Gen Z users.
+                            <p id="prudential-description">
+                                A collaborative prototype exploring how
+                                gamification can make insurance learning
+                                and engagement more approachable for
+                                Gen Z users.
                             </p>
 
-                            <div class="project-tags">
-                                <span>React</span>
-                                <span>HTML</span>
-                                <span>CSS</span>
+                            <div class="project-tags" role="list" aria-label="Insurance platform technologies">
+                                <span role="listitem">React</span>
+                                <span role="listitem">HTML</span>
+                                <span role="listitem">CSS</span>
                             </div>
 
-                            <ul>
-                                <li>Designed gamified financial learning features.</li>
-                                <li>Helped develop the user-facing prototype.</li>
-                                <li>Presented the concept during a Prudential hackathon.</li>
+                            <ul aria-label="Insurance platform project highlights">
+                                <li>
+                                    Designed gamified financial
+                                    learning features.
+                                </li>
+
+                                <li>
+                                    Helped develop the user-facing
+                                    prototype.
+                                </li>
+
+                                <li>
+                                    Presented the concept during
+                                    a Prudential hackathon.
+                                </li>
                             </ul>
 
                             <div class="project-actions">
-                                <a href="projects/prudential.html" class="text-link">
-                                    View Project
+                                <a href="projects/prudential.html" class="text-link"
+                                    aria-label="Explore the gamified insurance platform project">
+                                    Explore Project
                                 </a>
-
-                                
                             </div>
-
                         </div>
-
                     </article>
 
                 </div>
-
             </div>
-
         </section>
 
 
-        <!-- =========================
-             Achievements
-        ========================== -->
-        <section class="section" id="achievements">
+        <!-- ========================================
+             LEADERSHIP & ACHIEVEMENTS
+        ========================================= -->
 
+        <section class="section" id="achievements" aria-labelledby="achievements-title">
             <div class="container">
 
                 <div class="section-heading">
-                    <p class="section-label">Beyond Academics</p>
-                    <h2>Leadership & Achievements</h2>
-                </div>
+                    <p class="section-label">04 / Beyond the Code</p>
 
+                    <h2 id="achievements-title">
+                        Leadership. Discipline. Teamwork.
+                    </h2>
+
+                    <p class="hero-description">
+                        Experiences in competition, team leadership
+                        and national events.
+                    </p>
+                </div>
 
                 <div class="achievements-grid">
 
-                    <article class="achievement-card">
-                        <p class="achievement-year">2026</p>
-                        <h3>National Lifesaving Championship</h3>
+                    <article class="achievement-card" aria-labelledby="nationals-title">
+                        <p class="achievement-year">
+                            <time datetime="2026">2026</time>
+                            · Gold Medal
+                        </p>
+
+                        <h3 id="nationals-title">
+                            National Lifesaving Championship
+                        </h3>
+
                         <p>
                             Represented Singapore Polytechnic and
-                            achieved a gold medal.
+                            achieved a gold medal at the National
+                            Lifesaving Championship.
                         </p>
                     </article>
 
+                    <article class="achievement-card" aria-labelledby="lifesavers-title">
+                        <p class="achievement-year">
+                            Current · Leadership
+                        </p>
 
-                    <article class="achievement-card">
-                        <p class="achievement-year">Current</p>
-                        <h3>SP Lifesavers Vice Captain</h3>
+                        <h3 id="lifesavers-title">
+                            SP Lifesavers Vice Captain
+                        </h3>
+
                         <p>
-                            Support team training, coordination and
-                            junior development.
+                            Support team training, coordination
+                            and junior development within
+                            SP Lifesavers.
                         </p>
                     </article>
 
+                    <article class="achievement-card" aria-labelledby="ndp-title">
+                        <p class="achievement-year">
+                            <time datetime="2023">2023</time>
+                            · Participation
+                        </p>
 
-                    <article class="achievement-card">
-                        <p class="achievement-year">2023</p>
-                        <h3>National Day Parade Participant</h3>
+                        <h3 id="ndp-title">
+                            National Day Parade
+                        </h3>
+
                         <p>
-                            Participated in National Day Parade 2023.
+                            Participated in Singapore’s National
+                            Day Parade 2023.
                         </p>
                     </article>
 
                 </div>
-
             </div>
-
         </section>
 
 
-        <!-- =========================
-             Contact
-        ========================== -->
-        <section class="section contact-section" id="contact">
+        <!-- ========================================
+             CONTACT
+        ========================================= -->
 
+        <section class="section contact-section" id="contact" aria-labelledby="contact-title">
             <div class="container contact-content">
 
-                <p class="section-label">Get In Touch</p>
+                <p class="section-label">
+                    05 / Let’s Connect
+                </p>
 
-                <h2>
-                    Let’s build something meaningful.
+                <h2 id="contact-title">
+                    Let’s build something<br>
+                    meaningful.
                 </h2>
 
                 <p>
-                    I am interested in machine learning, data engineering,
-                    AI and smart manufacturing internship opportunities.
+                    I’m interested in internship opportunities across
+                    machine learning, data engineering, artificial
+                    intelligence and smart manufacturing.
                 </p>
 
-                <div class="contact-actions">
+                <p>
+                    Have an opportunity or a project in mind?
+                    I’d love to hear about it.
+                </p>
 
-                    <a
-                        href="mailto:cadentoh22@gmail.com"
-                        class="button button-primary"
-                    >
+                <div class="contact-actions" aria-label="Contact and social links">
+                    <a href="mailto:cadentoh22@gmail.com" class="button button-primary">
                         Email Me
+                        <span aria-hidden="true">↗</span>
                     </a>
 
-                    <a
-                        href="https://github.com/caden2222"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                    <a href="https://www.linkedin.com/in/caden-toh-wei-jie" target="_blank" rel="noopener noreferrer"
                         class="button button-secondary"
-                    >
-                        View GitHub
+                        aria-label="Connect with Caden Toh on LinkedIn — opens in a new tab">
+                        LinkedIn
+                        <span aria-hidden="true">↗</span>
                     </a>
 
+                    <a href="https://github.com/caden2222" target="_blank" rel="noopener noreferrer"
+                        class="button button-secondary"
+                        aria-label="View Caden Toh’s GitHub profile — opens in a new tab">
+                        View GitHub
+                        <span aria-hidden="true">↗</span>
+                    </a>
                 </div>
 
             </div>
-
         </section>
 
     </main>
 
 
-    <!-- =========================
-         Footer
-    ========================== -->
-    <footer class="site-footer">
+    <!-- ========================================
+         FOOTER
+    ========================================= -->
 
+    <footer class="site-footer">
         <div class="container footer-content">
 
             <p>
-                © <span id="current-year"></span> Caden Toh
+                &copy;
+                <span id="current-year">2026</span>
+                Caden Toh
             </p>
 
-            <a href="#home">
-                Back to top ↑
+            <a href="#home" aria-label="Return to the top of the page">
+                Back to top
+                <span aria-hidden="true">↑</span>
             </a>
 
         </div>
-
     </footer>
 
-
-    <script src="script.js"></script>
-
 </body>
+
 </html>
