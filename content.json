@@ -1,0 +1,105 @@
+{
+  "name": "Caden Toh",
+  "headline": "Applied AI & Analytics Student",
+  "email": "cadentoh22@gmail.com",
+  "github": "https://github.com/caden2222",
+  "linkedin": "https://www.linkedin.com/in/caden-toh-wei-jie/",
+  "projects": [
+    {
+      "slug": "sentiment",
+      "number": "01",
+      "category": "Models / Natural language processing",
+      "title": "Customer Review Sentiment Analysis",
+      "short": "From pizza reviews to sentiment patterns. Exploring recurrent models through text preprocessing, tuning and baseline comparison.",
+      "stack": [
+        "Python",
+        "TensorFlow",
+        "Keras",
+        "NLP"
+      ],
+      "context": "Academic project · Sentiment analysis",
+      "problem": "Explore how recurrent neural networks can classify sentiment in pizza reviews, and how a BiGRU model compares with an RNN baseline.",
+      "contribution": "I built RNN and BiGRU models, preprocessed the review text, tuned the models and evaluated performance against the RNN baseline.",
+      "approach": [
+        "Preprocess the review text for model input.",
+        "Build and tune recurrent models using Python, TensorFlow and Keras.",
+        "Evaluate the BiGRU model against the RNN baseline."
+      ],
+      "evidence": "The project work includes text preprocessing, model tuning and baseline evaluation. The diagram below illustrates that workflow; it is not a model output.",
+      "limitation": "Accuracy and F1 results are not published here. A baseline comparison is the focus of this study; the available evidence does not establish performance on new domains or deployment readiness.",
+      "learning": "The learning objective was to connect text preparation, recurrent architecture choices and evaluation in one sentiment-analysis workflow."
+    },
+    {
+      "slug": "powerbi",
+      "number": "02",
+      "category": "Data / Visual analytics",
+      "title": "Graduate Employment & Salary Trends",
+      "short": "Exploring graduate outcomes across institutions from 2018–2023, with salary comparisons and a closer look at employment cohorts.",
+      "stack": [
+        "Power BI",
+        "Data Analysis",
+        "Data Visualisation"
+      ],
+      "context": "Academic group project · 2018–2023 data",
+      "problem": "Explore how graduate salary and employment patterns vary across institutions and years, including fresh and post–National Service graduates.",
+      "contribution": "My contribution focused on salary trends and exceptions across institutions, employment patterns by institution, and comparisons between fresh and post–National Service graduates. The shared dashboard labels these panels with my name; other panels were created by a teammate.",
+      "approach": [
+        "Use Power BI to compare salary trends across institutions from 2018–2023.",
+        "Examine employment patterns across institutions and employment types.",
+        "Compare outcomes for fresh and post–National Service graduates."
+      ],
+      "evidence": "Original group dashboard. Caden-labelled panels show my contribution; the whole dashboard is shared group work. Open the full image to inspect the labels.",
+      "limitation": "These are descriptive comparisons, not evidence that institution or National Service status causes an outcome. Aggregated figures depend on the selected year and cohort; no business-impact claim is made.",
+      "learning": "The learning objective was to make differences between institutions and cohorts easier to examine through visual comparison."
+    },
+    {
+      "slug": "sql",
+      "number": "03",
+      "category": "Software / Data engineering",
+      "title": "SQL ETL & Data Warehouse",
+      "short": "Organising library loan data into a MySQL star-schema warehouse, from cleaning and transformation to borrowing-pattern queries.",
+      "stack": [
+        "MySQL",
+        "SQL",
+        "ETL",
+        "Data Modelling"
+      ],
+      "context": "Academic project · Library loan data",
+      "problem": "Organise library loan data into a structure that supports analysis of borrowing patterns.",
+      "contribution": "I designed a MySQL star-schema warehouse, cleaned and transformed data through ETL, and wrote SQL queries to analyse borrowing patterns.",
+      "approach": [
+        "Design a star-schema warehouse for library loan data.",
+        "Clean and transform data through an ETL workflow.",
+        "Write SQL queries to explore borrowing patterns."
+      ],
+      "evidence": "The workflow illustration summarises the project stages. It is not a screenshot of the database or an exact schema diagram.",
+      "limitation": "The schema, query files and measured results are not published here. No dataset size, speed improvement or validation statistics are claimed.",
+      "learning": "The learning objective was to connect data modelling and ETL with SQL analysis in a warehouse workflow."
+    },
+    {
+      "slug": "analogy",
+      "number": "04",
+      "category": "Software / Learning interface",
+      "title": "Analogy Tutor",
+      "short": "A learning-interface prototype for query, key and value concepts, with separate scripted and generated reply modes.",
+      "stack": [
+        "JavaScript",
+        "Node.js",
+        "Express",
+        "Groq API"
+      ],
+      "context": "Personal project · Prototype / in development",
+      "problem": "Explore how analogies can introduce query, key and value concepts, with a clear distinction between a fixed teaching example and a generated explanation.",
+      "contribution": "This repository brings together a browser learning interface and an Express backend. The implementation separates scripted replies from generated replies, manages conversation sessions, and handles provider errors. These are source-verified implementation details; live model behaviour has not been validated for this portfolio.",
+      "approach": [
+        "Offer explicitly selected scripted and generated reply modes.",
+        "Route requests through Express with separate in-memory conversation sessions.",
+        "Use a server-side Groq API provider for generated replies, with structured response validation and timeout handling."
+      ],
+      "evidence": "The linked source contains the session and chat routes in server.js and a real model API request in server/groq-provider.js. Scripted mode uses a separate provider. The workflow below is illustrative.",
+      "limitation": "This is a prototype. Generated mode requires a configured backend API key; it is not hosted inside this static portfolio. No live model request was tested during this redesign, and generated explanations may be inaccurate. Interactive graphics are separate from reply generation.",
+      "learning": "The learning focus is the boundary between interface behaviour, deterministic teaching content and model-generated responses.",
+      "repository": "https://github.com/caden2222/analogy-tutor"
+    }
+  ]
+}
