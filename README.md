@@ -1,64 +1,66 @@
 ﻿# Caden Toh — Build Desk portfolio
 
-A static HTML/CSS/JavaScript portfolio for AI, data and technology internship applications. No frontend framework, package installation, backend or API key is needed. System fonts (Arial, Georgia and Courier New) avoid third-party font requests.
+One continuous portfolio at `/portfolio-website/`, with static profile content, inline project case studies and an automatically advancing capability console. React/Three.js enhances only the console illustration; the rest remains HTML/CSS/JavaScript. TypeScript, Tailwind and shadcn-compatible aliases are configured.
 
-## Run locally
+## Run and check
 
-From the repository directory, with Python 3:
-
-```powershell
-python tools/build.py
-python tools/serve.py
-```
-
-Open http://localhost:8000/portfolio-website/. Stop with Ctrl+C. The preview serves only `dist/`, so local research notes, source tooling and the superseded PDF are not exposed. Generated root HTML can also be opened directly for a quick preview.
-
-## Edit content and assets
-
-- `content.json`: identity/contact fields and the four project records. Project summaries and detail pages share these records.
-- `tools/build.py`: static page templates; edit profile, education, experience and shared navigation here. Run the generator after editing either file. Generated HTML is committed so GitHub Pages can remain buildless if needed.
-- `style.css`: colour tokens, layouts, original typographic covers, console illustration and responsive styles.
-- `script.js`: progressive enhancement for navigation and capability selection. Keep its three short capability descriptions aligned with the corresponding project records.
-- `assets/images/profile.jpeg`: existing portrait, reused after inspection.
-- `assets/images/graduate-employment-dashboard.png`: original shared dashboard. Its Caden-labelled charts are his contribution; the remaining charts are a teammate's work. The detail page links to the full-size original.
-- Other project covers are illustrative HTML/CSS, not fabricated screenshots. Sentiment and SQL repositories were not supplied, so they have no invented source links.
-
-The console uses native buttons and HTML explanations with `aria-pressed` and a polite live region. It contains no continuous animation or WebGL render loop; only short press/hover transitions occur. Reduced motion disables these transitions. With JavaScript disabled, navigation, profile, all projects and the default Models illustration remain available.
-
-## Resume status — action needed
-
-The requested `Grey Modern Profesional Resume (1)(1).pdf` was not found in the workspace and could not be read. The existing `assets/resume.pdf` was rendered and visually verified as Caden's **older** resume. It has different projects and coursework from the supplied current facts. Its contents have not been changed.
-
-All Resume links currently go to `resume.html`, which offers an email request for the current copy. The older PDF is excluded from `dist/`. To enable a download, replace `assets/resume.pdf` with the verified current PDF, change the resume destinations in `tools/build.py`, and copy that single canonical asset into `dist/assets/` in the build step. Do not generate a replacement resume from the website copy.
-
-## Sources and omissions
-
-Profile, GPA 3.91, education dates, employment, leadership, medal, listed distinctions and the three academic projects use the user-supplied verified resume facts. LinkedIn content was inaccessible; no additional LinkedIn facts were used.
-
-Analogy Tutor is included following the user's clarification. Its public README, `server.js` and `server/groq-provider.js` were inspected on 16 November 2026. The source implements separate scripted and generated modes and a real Groq API request. The portfolio describes it as a prototype. Live generated responses and the project's interactive graphics were not run or independently validated.
-
-Omitted: old CNN accuracy claims, VAE, burnout chatbot, Prudential project, NDP participation, certifications and old resident-data Power BI claims. The older resume lists some of these, but they are outside the approved selected work and were not independently verified against their project source. Its listed coursework differs from the latest supplied facts; the site uses the explicitly supplied current distinction list. No semester results, model scores, dataset sizes, business-impact figures or employment dates beyond the approved brief were added. Private source inventory and verification notes are in ignored `.qa/`, outside the served artifact.
-
-Old `cnn.html`, `chatbot.html`, `prudential.html` and `vae.html` URLs now show a short retirement notice linking to selected work. The existing Power BI and SQL paths are retained.
-
-## Verification
+Requires Node.js 22.15+ and Python 3.
 
 ```powershell
-python tools/build.py
-node --check script.js
-node tests/portfolio.cjs
+npm ci
+npm run build
+npm run preview
 ```
 
-The browser check requires Node 22+ and Chrome. Default executable: `C:/Program Files/Google/Chrome/Application/chrome.exe`; override with `CHROME_PATH` if needed. It starts and closes its own server and headless browser, tests the `/portfolio-website/` base path, and writes ignored screenshots to `.qa/`.
+Open http://localhost:8000/portfolio-website/. Stop the preview with Ctrl+C. The server exposes only `dist/`, excluding research notes, unused images, tooling and the older resume.
 
-Passed: 1440×900, 768×1024, 390×844 and 320×740 layouts; no horizontal overflow; all capability states and destinations; Enter activation and focus outline; mobile menu open/close/Escape; local links and assets across project/resume pages; reduced-motion CSS; no-JavaScript content/navigation; no runtime exceptions or missing asset responses. Desktop, tablet, mobile and project screenshots were captured and inspected. Public output was searched for prohibited reference-specific names/claims and encoding corruption with no matches. No performance score or full accessibility certification is claimed. External profile destinations and live tutor generation are not covered by the browser suite.
+```powershell
+npm test
+```
+
+The browser suite requires Chrome (default `C:/Program Files/Google/Chrome/Application/chrome.exe`; override `CHROME_PATH` as needed). It starts and closes its own server/browser, uses the real `/portfolio-website/` prefix and saves screenshots in ignored `.qa/`. Timed showcase checks intentionally take about a minute.
+
+## Page and interactions
+
+Navigation uses `#home`, `#projects`, `#about`, `#experience` and `#contact`. Resume links lead to the inline `#resume` note. The header is sticky; native anchor navigation respects its offset and reduced-motion preferences.
+
+Each project has a stable direct link: `#project-sentiment`, `#project-powerbi`, `#project-sql`, `#project-analogy`. Explore/Close buttons toggle inline case studies using `aria-expanded`, `aria-controls` and native `hidden`. Hidden content is removed from keyboard navigation. Opening/closing a disclosure preserves the current position; following an explicit project link reveals its study and scrolls to the project. Without JavaScript, all case studies remain readable.
+
+Models → Data → Software advances every six seconds. `script.js` owns the sole writable showcase state and progression timer; React observes its projection for the shader. A decorative progress line follows the same interval. Manual selection pauses until Resume showcase is explicitly chosen. Pointer hover, keyboard focus, offscreen visibility and hidden tabs temporarily suspend progression. Returning starts a fresh full interval. Reduced motion defaults to a static state with manual selection available; visitors can explicitly resume the showcase. Automatic transitions neither move focus nor announce content; manual selections use a dedicated polite status region.
+
+The shader shares the showcase pause state, respects reduced motion, limits pixel ratio to 1.5, and disposes resources. WebGL failure has a CSS fallback; missing JavaScript retains the HTML console illustration. There is no wheel interception, body lock, fullscreen video sequence or automatic page scrolling.
+
+Existing project URLs redirect to their corresponding homepage anchors. The older CNN, chatbot, Prudential and VAE paths redirect to selected work. `resume.html` redirects to `#resume`; the superseded `motion-study.html` redirects to `#home`. These are compatibility documents, not separate content routes.
+
+## Editing
+
+- `content.json`: shared project titles, summaries, tools, contribution, approach, limitations, evidence and source links.
+- `tools/build.py`: page templates, profile/education/experience copy, inline studies and compatibility documents. Run `npm run build` after edits. Generated HTML is committed for static review.
+- `script.js`: navigation, disclosures and showcase controller. Keep its short capability descriptions aligned with project content.
+- `style.css`: main design tokens, editorial typography, responsive layouts and disclosure/showcase styles. System Arial, Georgia and Courier New avoid font downloads.
+- `components/ui/shader-animation.tsx`: typed reusable shader; `components/demo.tsx` retains its reusable RGB demo. Portfolio colouring is amber.
+- `src/shader-entry.tsx`: the small React mount. `src/styles.css`: Tailwind utilities and shader styling without global Preflight.
+- `components.json`, `tsconfig.json`, `vite.config.ts`: shadcn, TypeScript and Vite setup. `@/components/ui` maps to root `components/ui`; `lib/utils.ts` supplies `cn`. No context providers are required. For future components, use `npx shadcn@latest add <component>` and review the output; no reinitialization is needed.
+- `assets/shader/`: ignored generated React/Three bundle; the build copies only current bundles into `dist/`.
+
+Setup references: [shadcn Vite](https://ui.shadcn.com/docs/installation/vite), [shadcn aliases](https://ui.shadcn.com/docs/components-json), [Tailwind Vite](https://tailwindcss.com/docs/installation/using-vite).
+
+## Assets, accuracy and resume status
+
+The portrait is the existing `assets/images/profile.jpeg`. The original `graduate-employment-dashboard.png` is shared group work: Caden-labelled panels show his contribution; other panels belong to a teammate. Other covers and workflow diagrams are illustrative, not fabricated screenshots or technical results.
+
+Identity, GPA 3.91, current education, three academic projects, employment, leadership and distinctions use the user's supplied verified facts. LinkedIn content was inaccessible; no additional facts were taken from it. Analogy Tutor is included following the user's explicit clarification. Its README, server routes and Groq provider source were inspected; it is labelled a prototype, with scripted and generated modes distinguished. Live model responses were not tested.
+
+The requested `Grey Modern Profesional Resume (1)(1).pdf` was absent. The existing `assets/resume.pdf` was visually verified as Caden's older resume, with different projects and coursework. It remains unchanged and is excluded from the public artifact. The inline Resume note offers an email request for the current copy. To enable a download, replace the one canonical `assets/resume.pdf` with the verified current PDF, update the links in `tools/build.py`, and explicitly copy it into `dist/assets/` during the build. Do not generate a resume from portfolio copy.
+
+Omitted: old CNN metrics, VAE, burnout chatbot, Prudential work, NDP participation, certifications and superseded resident-data Power BI descriptions. The older resume contains some of these, but they are outside the approved selected work and were not independently checked against project source. Current distinctions follow the user's latest verified list. No model scores, semester results, dataset sizes or business-impact figures were invented. Private research notes remain in ignored `.qa/` and are never served.
 
 ## Publishing after review
 
-No `.github` Pages workflow existed in this checkout. No deployment or repository setting has been changed.
+`npm run build` produces `dist/` with relative asset paths suitable for GitHub Pages. No deployment is activated. An inactive manual workflow lives at `tools/github-pages.yml.example`; after review, copy it to `.github/workflows/pages.yml`, configure Pages for Actions if necessary, and run it manually. It installs dependencies and builds the public artifact. Publish `dist/`, not the whole checkout.
 
-`python tools/build.py` prepares `dist/` as the publication artifact, containing only public pages and the two used images. All local paths are relative and work beneath `/portfolio-website/`.
+## Validation scope
 
-An inactive manual deployment workflow is provided at `tools/github-pages.yml.example`. After review, copy it to `.github/workflows/pages.yml`, configure GitHub Pages to use Actions if needed, and run the workflow manually. Publish `dist/`, not the whole checkout, to exclude research notes, unused assets and the old PDF. The example has no push trigger and is not active at its current path.
+The suite checks real six-second progression, manual persistence, explicit pause/resume, hover/focus/offscreen/actual hidden-tab suspension, fresh intervals after returning, reduced motion, keyboard selection, inline expansion and scroll stability, direct links, legacy redirects, navigation and asset paths, local resume/email/source destinations, and static content without JavaScript. Layouts cover 1440×900, 768×1024, 390×844 and 320×740. It does not claim a performance score, full accessibility compliance, live tutor API verification or current availability of external profile destinations.
 
-Suggested commit message: `Redesign portfolio as Build Desk with verified project studies`
+Suggested commit: `Unify portfolio with inline case studies and an accessible animated showcase`
