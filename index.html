@@ -41,9 +41,11 @@
     <!-- Existing external files -->
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <script src="workbench.js" defer></script>
 </head>
 
-<body>
+<body class="portfolio-home">
+    <a class="skip-link" href="#main-content">Skip to content</a>
 
     <!-- ========================================
          NAVIGATION
@@ -103,15 +105,15 @@
 
                 <div class="hero-content">
                     <p class="eyebrow">
-                        Applied AI &amp; Analytics · Singapore Polytechnic
+                        Caden Toh / Applied AI &amp; Analytics
                     </p>
 
                     <h1 id="hero-title">
-                        Caden <span>Toh.</span>
+                        Turning data<br>into <span>possibility.</span>
                     </h1>
 
                     <h2>
-                        Aspiring Machine Learning Engineer
+                        Aspiring machine learning engineer. Curious by design.
                     </h2>
 
                     <p class="hero-description">
@@ -123,7 +125,7 @@
 
                     <div class="hero-actions" aria-label="Explore my work">
                         <a href="#projects" class="button button-primary">
-                            Explore My Projects
+                            Explore my work
                             <span aria-hidden="true">↘</span>
                         </a>
 
@@ -151,9 +153,31 @@
                     </div>
                 </div>
 
-                <div class="hero-image">
-                    <img src="assets/images/profile.jpeg" alt="Portrait of Caden Toh" class="profile-image" width="640"
-                        height="800" fetchpriority="high" decoding="async">
+                <div class="workbench" aria-label="Interactive capability console">
+                    <div class="workbench-topline"><span>THE BUILD DESK / 01</span><button id="motion-toggle" type="button" aria-pressed="false" hidden>Pause motion</button></div>
+                    <div class="console-stage">
+                        <div class="console">
+                            <div class="console-display">
+                                <span class="console-status">CADEN / SYSTEMS IN THE MAKING</span>
+                                <div class="display-art" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                                <span class="display-readout" aria-hidden="true">01 — LEARN. TEST. REFINE.</span>
+                            </div>
+                            <div class="console-keys" role="group" aria-label="Explore my capabilities">
+                                <button type="button" class="console-key is-selected" data-capability="ml" aria-pressed="true"><span class="key-symbol" aria-hidden="true">M<span class="key-sub">L</span></span><span>Machine learning</span><small>01 / MODELS</small></button>
+                                <button type="button" class="console-key" data-capability="data" aria-pressed="false"><span class="key-symbol" aria-hidden="true">{ }</span><span>Data &amp; analytics</span><small>02 / INSIGHT</small></button>
+                                <button type="button" class="console-key" data-capability="code" aria-pressed="false"><span class="key-symbol" aria-hidden="true">&lt;/&gt;</span><span>Software</span><small>03 / SYSTEMS</small></button>
+                            </div>
+                            <div class="console-edge" aria-hidden="true"><span>CT—01</span><span>● &nbsp; ● &nbsp; ● &nbsp; ●</span></div>
+                        </div>
+                        <span class="desk-coordinate" aria-hidden="true">1.3521° N / 103.8198° E</span>
+                    </div>
+                    <p class="console-instruction">Press a key. Explore what I build.</p>
+                    <div class="capability-detail" aria-live="polite" aria-atomic="true">
+                        <p class="section-label" id="capability-label">01 / Machine learning</p>
+                        <h3 id="capability-title">From patterns to predictions.</h3>
+                        <p id="capability-description">Training and evaluating models that turn complex inputs into useful results.</p>
+                        <a class="text-link" id="capability-link" href="projects/cnn.html">Explore the CNN project ↗</a>
+                    </div>
                 </div>
 
             </div>
@@ -179,6 +203,7 @@
                 <div class="about-grid">
 
                     <div class="about-text">
+                        <div class="about-person"><img src="assets/images/profile.jpeg" alt="Caden Toh" width="80" height="80" loading="lazy"><span>Caden Toh<small>Singapore · Building with curiosity</small></span></div>
                         <p>
                             I’m a Year 2
                             <strong>
